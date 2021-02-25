@@ -4,12 +4,25 @@ import Navbar from './components/Navbar'
 import CountriesList from './components/CountriesList'
 import countriesJSON from './countries.json'
 
+
 class App extends Component {
+
+  state = {
+    countries:countriesJSON
+  }
+
+
   render () {
+    console.log('RENDER | App -----------')
+    // deconstruct the variables
+    const {countries} = this.state
+    // console.log(countries)
+    
     return (
       <> 
         <Navbar />
-        <div className="container">
+          <div className="container">
+          <CountriesList countries={countries}/>
 
         </div>
       </>
