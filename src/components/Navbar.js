@@ -1,7 +1,10 @@
 import React, {Component} from 'react'
 
 class Navbar extends Component {
+
+    
     render () {
+        console.log('RENDER | Navbar -------')
         return (
             <nav className="navbar navbar-dark bg-primary mb-3">
                 <div className="container">

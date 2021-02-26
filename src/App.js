@@ -19,13 +19,13 @@ class App extends Component {
     // console.log(countries)
     
     return (
-      <> 
+      <div> 
         <Navbar />
-          <div className="container">
-          <CountriesList countries={countries}/>
-
+        <div className="container">
+            <CountriesList countries={countries}/>
+            {/* CountryDetails */}
         </div>
-      </>
+      </div>
 
     )
   }
