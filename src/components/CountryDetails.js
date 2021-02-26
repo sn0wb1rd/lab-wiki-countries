@@ -8,18 +8,12 @@ class CountryDetails extends Component {
         countries: this.props.countries
     }
 
-
-    // componentDidMount(){
-    //     console.log('cDM | CnrtyDetails ------- props: ', this.props)
-    // }
-
     render () {
         console.log('RENDER | CntryDetails-----------')
         //deconstruct
         const {countries} = this.state
     
         // console.log('RENDER | CntryDetails propz: ', this.props)
-        // console.log('see all countries: ', this.state.countries)
 
         // get the id related to the selected country in List
         let cca3 = this.props.match.params.cca3

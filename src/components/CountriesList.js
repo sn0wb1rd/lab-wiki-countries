@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
-import { Link, Route } from 'react-router-dom'
-import CountryDetails from './CountryDetails'
+import { Link } from 'react-router-dom'
 
 class CountriesList extends Component {
 
@@ -13,7 +12,7 @@ class CountriesList extends Component {
         // console.log('countries: ', countries[5])
 
         return (
-            <div className="row">
+
                 <div className="col-5">
                     <div className="list-group">
                         {
@@ -25,25 +24,8 @@ class CountriesList extends Component {
                                 )                        
                             })
                         }  
-                    </div>                              
-                    
-                    {/* <Route path="/id"  component={CountryDetails} /> */}               
-
-                </div>
-                <div className="col-7">
-                        {/* <Route path='/:id' component={CountryDetails}/> */}
-                        <Route path='/:cca3'  render={(routeProps) => {
-                            return <CountryDetails 
-                            // investigate the special props, not sure 
-                            // why is was mentioned in the descr of it 1.4
-                            match={routeProps.match} 
-                            location={routeProps.location} 
-                            history={routeProps.history}
-                            countries={countries}
-                            />            
-                        }} />
-                </div>
-            </div>
+                    </div>           
+                 </div>
         )
     }
 }
